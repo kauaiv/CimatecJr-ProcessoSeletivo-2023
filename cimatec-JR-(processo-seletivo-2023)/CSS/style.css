@@ -1,0 +1,603 @@
+
+/*centralizando div do header*/
+.hcenter{
+    background-color: #8F73BB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 68px;
+    width: 100%;
+}
+
+a{
+    color: rgba(0, 0, 0, 0.549);
+    font-size: 20px;
+    font-family: "poppins";
+    font-weight:bold ;
+    text-decoration: none;
+    margin-right: 36px;
+}
+
+/* houver do botão */
+.abotton{
+    transition: background-color 0.8s ease; 
+    border-radius: 10px; 
+    padding: 10px;
+}
+.abotton:hover{
+    color: #E69A74;
+    background-color: #7b62a2;
+}
+
+/*posicionando logo+efeito*/
+.logo{
+    width: 56px;
+    height: 56px;
+    margin-right: 420px;
+    transition: transform 0.3s ease; /* efeito de transição suave */
+} 
+.logo:hover {
+    transform: scale(1.05); 
+}
+
+            /* section 1 */
+          
+
+body{
+    overflow-x: hidden;
+}
+
+
+            /* section 1 (carrosel) (end)*/
+.carrosel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 76px); /* altura da janela do navegador menos a altura do header */
+}
+
+/* pondo as dimensões do carrosel, ajustando a tela no display */
+.carrosel{
+    width: 1364px;
+    height: 592px;
+    overflow: hidden;
+}
+
+.cards{
+    width: 500%;
+    height: 500px;
+    display: flex;
+}
+
+.cards input{
+    display: none;
+}
+
+.card{
+    width: 20%;
+    transition: 2s;
+}
+
+.card img{
+    width: 1364px;
+    height: 657px;
+}
+
+/* css para nav manual(start) */
+/* posicionando butões */
+.nav-manual{
+    position: absolute;
+    width: 1364px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+/* estilizando butão */
+.manual-btn{
+    border: 2.6px solid #8F73BB;
+    padding: 12px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+/* espaçamento entre butões */
+.manual-btn:not(:last-child){
+    margin-right: 50px;
+}
+
+.manual-btn:hover{
+    background-color: #5a3891;
+}
+
+/* criando aspecto de transição dos butões(start) */
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+#radio2:checked ~ .first{
+    margin-left: -20%;
+}
+#radio3:checked ~ .first{
+    margin-left: -40%;
+}
+#radio4:checked ~ .first{
+    margin-left: -60%;
+}
+/* criando aspecto de transição dos butões(end) */
+/* css para nav manual(end) */
+
+/* css para nav auto(star) */
+.nav-autoplay{
+    position: absolute;
+    display: flex;
+    width: 1364px;
+    justify-content: center;
+    margin-top: 520px;
+}
+
+.nav-autoplay div{
+    border: 2.4px solid #8F73BB;
+    padding: 12px;
+    border-radius: 12px;
+    transition: 1s;
+}
+
+.nav-autoplay div:not(:last-child){
+    margin-right: 50px;
+}
+
+radio1:checked ~ .nav-autoplay .auto-btn1{
+    background-color: #8F73BB;
+}
+radio2:checked ~ .nav-autoplay .auto-btn2{
+    background-color: #8F73BB;
+}
+radio3:checked ~ .nav-autoplay .auto-btn3{
+    background-color: #8F73BB;
+}
+radio4:checked ~ .nav-autoplay .auto-btn4{
+    background-color: #8F73BB;
+}
+/* css para nav auto(end) */
+            /* section 1 (carrosel) (end)*/
+
+
+
+            /* section 2(modal)(start) */
+
+.fundo-gold{
+    background-image: radial-gradient( gold, #D6D1B8);
+}            
+.titulo{
+    margin: 0;
+    height: 13.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 55px;
+    position: relative; /* Define a posição como relativa para que a pseudo-classe seja posicionada em relação a este elemento */
+}
+
+.titulo::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 14%;
+  left: 50%; /* Posiciona a linha no centro horizontal do elemento pai */
+  transform: translateX(-50%); /* Move a linha para a esquerda em 50% da sua largura para centralizá-la */
+  width: 16em; /* Largura da linha */
+  height: 3px; /* Altura da linha */
+  background-color: #2A2828; /* Cor de fundo da linha */
+  /* Outras propriedades de estilo da linha */
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    padding: 3rem;
+    flex-direction: column; /* Altera a direção dos elementos filhos para coluna */
+    align-items: center; /* Centraliza os elementos na vertical */
+ 
+    
+}
+
+.textdown{
+    margin-top: 3.5rem; /* Adiciona uma margem no topo para separar da classe "marcas" */
+    font-size: 26px; /* Altere o valor do tamanho da fonte de acordo com suas necessidades */
+    width: 68vw;
+    text-align: center;
+    border-radius: 10px;
+    padding: 0.4rem;
+}
+
+
+.marcas {
+    background-image: radial-gradient( gold, #D6D1B8);
+    display: flex;
+    width: 70vw;
+    border-radius: 200px;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    gap: 4rem;
+  }  
+.marca:hover{
+    transform: scale(1.2); 
+}
+
+.marca{
+    width: 180px;
+    height: 180px;
+    border-radius: 100px;
+}
+
+.espaco{
+    height: 17.8vw;
+}
+.espaco2{
+    height: 48.5vw;
+}
+
+
+/* dialog, estilização popouts(modal)(start) */
+.dialogbox {
+    background-color: #1e1e1e; 
+    width: 60vw;
+    height: 30vw;
+    border-radius: 5%;
+    padding: 3rem;
+    position: fixed; 
+    top: 78%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 4px solid white;
+    box-shadow: 0 0 100px white;
+    color: white; 
+}
+
+h2{
+    font-size: 40px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: -30px;
+
+}
+
+.textm{
+    text-align: justify;
+    font-size: 20px;
+    color: white;
+    position: absolute ;
+    top: 22%;
+    left: 6%;
+    right: 48%;
+}
+.textm::after {
+    content: "";
+    position: absolute;
+    left: 4.5vw;
+    bottom: 107%;    
+    width: 50vw; 
+    height: 3px; 
+    background-color: white; 
+  }
+
+#marcadialog{
+    background-color: blue;
+    border-radius: 100%;
+    position: absolute;
+    width: 16vw;
+    height: 16vw;
+    right: 8.5vw;
+    bottom: 10.8vw;
+    filter: blur(2px); 
+    transition: filter 0.8s ease; 
+}
+#marcadialog:hover{
+    filter: blur(0px); 
+}
+
+
+.bot-closemod {
+    background-color: transparent; 
+    color: white; 
+    padding: 15px 40px; 
+    border: none; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+    border-radius: 20px; 
+    font-size: 22px; 
+    position: absolute;
+    right: 11vw;
+    bottom: 4vw;
+    border: 2px solid white; 
+}
+.bot-closemod:hover {
+    background-color: #0b0b0b;
+    color: yellowgreen; 
+}
+/* dialog, estilização popouts(modal)(end) */
+            /* section 2(modal)(end) */
+
+
+
+             /* section 3(produtos)(start) */
+/* Estilo para a seção de catálogo */
+#catalogo-gradiente{
+    background-image: linear-gradient(to bottom, #E2D282, #D6D1B8); 
+}
+
+.catalogo{
+    background-color: rgba(0, 0, 0, 0.906);
+    position: relative;
+    overflow: hidden;
+    padding: 25px 0px 0px 0px;
+}
+  
+/* Estilo para o container de produtos aq é definida tb a rolagem */
+.prod-container{
+    padding: 0 10vw;
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+.prod-container::-webkit-scrollbar{
+    display: none;
+}
+
+/* Estilo para o slide de produto */
+.prod-card{
+    flex: 0 0 auto;
+    width: 250px;
+    height: 470px;
+    margin-right: 40px;
+}
+
+/* Estilo para a imagem e botão do produto */
+.prod-img{
+    position: relative;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+}
+
+/* posicionando a thumb da img */
+.prod-thumb{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+  
+.card-btn{
+    background-color: black;
+    color: #8F73BB;
+    position:absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translatex(-50%);
+    padding: 10px;
+    width: 80%;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    transition: 0.6s;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.prod-card:hover .card-btn{
+    opacity: 1;
+}
+
+.card-btn:hover{
+    background-color: #8F73BB;
+    color: black;
+}
+
+/* Estilo para o nome, descrição e preço do produto */
+.prod-info{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    padding-top: 10px;
+}
+
+/* Estilo para o nome do produto */
+.prod-name{
+    font-size: 14px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: black;
+    text-transform: uppercase;
+    padding: 5px 10px; 
+    border: 1px solid #f7f7f7; 
+    border-radius: 3px; 
+}
+
+/* Estilo para o preço do produto */
+.price{
+    background-color:#a895c7; 
+    font-weight: 900;
+    font-size: 20px;
+    padding: 2px 6px; 
+    border: 1px solid #f7f7f7; 
+    border-radius: 3px; 
+}  
+  /* Estilo para o preço real do produto */
+.real-price {
+    margin-left: 20px;
+    opacity: 0.5;
+    text-decoration: line-through;
+    color: white;
+}
+
+  
+  /* Estilo para os botões de avançar e retornar nos produtos */
+  .pre-btn, .nxt-btn{
+    border: none;
+    width: 10vw;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+    cursor: pointer;
+    z-index: 8;
+    opacity: 0.5; 
+    }
+.nxt-btn{
+    right: 0;
+}
+.pre-btn{
+    left: 0;
+    transform: rotate(180deg);
+}
+
+.pre-btn img, .nxt-btn img {
+  opacity: 0.2;
+}
+
+.pre-btn:hover img, .nxt-btn:hover img {
+  opacity: 1;
+}
+
+             /* section 3(produtos)(end) */
+
+
+
+             /* section 4(feedback) (start) */
+.review{
+    box-sizing: border-box;
+    /* font-family: sans-serif; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: -40px;
+}
+
+.top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.comment-box:hover{
+    margin-top: 12px;
+}
+
+.comment-box{
+    width: 500px;
+    background: white;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 3px 3px 25px rgba(0,0,0,0.3);
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+}
+
+.profile-image{
+    width: 70px;
+    height: 70px;
+    box-shadow: 2px 2px 30px rgba(0,0,0,0.3);
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.profile-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.Name{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.Name strong{
+    color: black;
+    font-size: 18px;
+}
+
+.Name span{
+    color: gray;
+    margin-top: 2px;
+}
+
+.comment p{
+    color: black;
+}             
+            /* section 4(feedback) (end) */
+
+
+            
+            /* section 5(footer) (start) */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #8F73BB;
+    color: rgba(0, 0, 0, 0.746);
+    padding: 20px;
+    height: 210px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  left: 10rem;
+}
+
+.footer-address {
+    text-decoration: underline;
+    transition: color 0.3s ease; 
+}
+.footer-address:hover {
+    color: #ccc; 
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: relative;
+  right: 10rem;
+}
+.address{
+    color: rgba(0, 0, 0, 0.861);
+}
+            /* section 5(footer) (end) */
+            
+
+
+

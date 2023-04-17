@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- importando fontes:lato,open sans, poppins     -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- declarando css -->
+    <link rel="stylesheet" href="./CSS/reset.css">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <title>CitySneakers</title>
+
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
+    <link rel="icon" href="./assets/logo.png" type="image/x-icon">
+
+</head>
+
+
+
+
+<body>
+
+    <header> 
+        <!-- alinhando cabeçário a logo -->
+        <div class="hcenter"> 
+            <a class="logo" href="index.html"><img class="logo" src="./assets/logo.png" alt=""></a>
+            <nav>
+                    <a class="abotton" href="#slide-marcas">MARCAS</a>
+                    <a class="abotton" href="#catalogo-gradiente">CATÁLOGOS</a>
+                    <a class="abotton" href="#slide-feedback" lang="en" >FeedBack</a>
+            </nav>
+        </div>
+    </header>
+
+
+
+    <!-- carrosel(start) -->
+    <div class="carrosel" class="carrosel-container">
+        <div class="cards">
+            <!-- botões dos cards -->
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+            <!-- botões dos cards -->
+
+            <!-- imagens do carrosel(start) -->
+            <div class="card first">
+                <img src="./assets/card1.png" alt="">
+            </div>
+            <div class="card">
+                <img src="./assets/card2.png" alt="">
+            </div>
+            <div class="card">
+                <img src="./assets/card3.png" alt="">
+            </div>
+            <div class="card">
+                <img src="./assets/card4.png" alt="">
+            </div>
+            <!-- imagens do carrosel(end) -->
+
+            <!-- nav-autoplay carrosel(start) -->
+            <div class="nav-autoplay">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+            </div>
+            <!-- autoplay carrosel(start) -->
+        </div>
+
+        <!-- nav-manual carrosel(start) -->
+        <div class="nav-manual">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
+        </div>
+        <!-- nav-manual carrosel(start) -->
+    </div>
+    <!-- carrosel(end) -->
+
+
+
+    <!-- section2 (marcas+modal) -->
+    <div class="fundo-gold">
+        <h1 id="slide-marcas" class="titulo">Nossas Marcas</h1> 
+        <div class="container">
+            <div class="marcas">
+                <img class="marca" src="./assets/logo1.png" alt="" onclick="openModal('modal1')">
+                <img class="marca" src="./assets/logo2.png" alt="" onclick="openModal('modal2')">
+                <img class="marca" src="./assets/logo3.png" alt="" onclick="openModal('modal3')">
+                <img class="marca" src="./assets/logo4.png" alt="" onclick="openModal('modal4')">
+                
+                <dialog class="dialogbox" id="modal1" class="modal" >
+                    <img src="./assets/modal1.png" alt="">
+                    <h2>New Balance:</h2>
+                    <p class="textm">"A New Balance é uma marca de tênis reconhecida por sua qualidade e conforto incomparáveis. Com designs modernos e inovadores, a New Balance oferece uma ampla gama de modelos para todos os gostos. Seja para corrida, treino ou uso casual, os tênis New Balance são a escolha perfeita para os amantes de calçados esportivos que valorizam estilo e desempenho."</p>
+                    <img id="marcadialog" src="./assets/logo1.png" alt="">
+                    <button class="bot-closemod" onclick="closeModal('modal1')">Voltar</button>
+                </dialog>
+
+                <dialog class="dialogbox" id="modal2" class="modal" >
+                    <img src="./assets/modal1.png" alt="">
+                    <h2>Nike:</h2>
+                    <p class="textm">"A Nike é uma marca líder no mercado de tênis, conhecida mundialmente por sua tecnologia de ponta e estilo icônico. Com uma ampla variedade de modelos, desde os clássicos até os mais recentes lançamentos, a Nike oferece opções para atletas profissionais e entusiastas do esporte. Seja correndo, treinando ou usando no dia a dia, os tênis Nike garantem conforto, durabilidade e performance de alto nível."</p>
+                    <img id="marcadialog" src="./assets/logo2.png" alt="">
+                    <button class="bot-closemod" onclick="closeModal('modal2')">Voltar</button>
+                </dialog>
+
+                <dialog class="dialogbox" id="modal3" class="modal" >
+                    <img src="./assets/modal1.png" alt="">
+                    <h2>Adidas:</h2>
+                    <p class="textm">"A Adidas é uma marca de renome quando se trata de tênis, com uma longa história de inovação e design contemporâneo. Com modelos icônicos que transcendem gerações, a Adidas é a escolha perfeita para aqueles que buscam um estilo clássico e atemporal. Seja para práticas esportivas ou para uso casual, os tênis Adidas oferecem conforto, qualidade e estilo em cada passo."</p>
+                    <img id="marcadialog" src="./assets/logo3.png" alt="">
+                    <button class="bot-closemod" onclick="closeModal('modal3')">Voltar</button>
+                </dialog>
+
+                <dialog class="dialogbox" id="modal4" class="modal" >
+                    <img src="./assets/modal1.png" alt="">
+                    <h2>Puma:</h2>
+                    <p class="textm">"A Puma é uma marca conhecida por sua abordagem ousada e autêntica ao design de tênis. Com uma ampla variedade de modelos, desde os mais casuais até os mais esportivos, a Puma é a escolha certa para aqueles que buscam um estilo único e diferenciado. Com sua combinação de conforto, funcionalidade e estilo arrojado, os tênis Puma são ideais para quem deseja se destacar da multidão."</p>
+                    <img id="marcadialog" src="./assets/logo4.png" alt="">
+                    <button class="bot-closemod" onclick="closeModal('modal4')">Voltar</button>
+                </dialog>
+            </div>
+            <p class="textdown">"Descubra mais sobre as marcas mais famosas do mercado, exclusivas aqui na CitySneakers! <strong>Clique para obter mais detalhes.</strong> "</p>
+        </div>
+    </div>
+    <!-- section2 (marcas+modal) -->
+
+
+
+    <!-- section3 (carrosel+catalogo)(start) -->
+    <div>
+        <h1 style="position: relative;" id="catalogo-gradiente" class="titulo">Catálogo</h1> 
+
+        <!-- criando a sessão para o catálogo -->
+        <section class="catalogo"> 
+            <!-- butões para avançar e retornar nos produtos -->
+            <button class="pre-btn"><img src="./assets/arrow.png" alt=""></button>
+            <button class="nxt-btn"><img src="./assets/arrow.png" alt=""></button>
+            <!-- container onde ficarão agrupados os produtos -->
+            <div class="prod-container" >
+                <!-- criação de uma div com classe para estilizar de forma padrão os prod -->
+                <div class="prod-card">
+                    <!-- estilizando cada thumb(img+prod) -->
+                    <div class="prod-img" >
+                        <img class="prod-thumb" src="./assets/boot1.png" alt="">
+                        <button class="card-btn">Adicionar ao carrinho</button>
+                    </div>
+                    <!-- estilizando text+inFo(prod) -->
+                    <div class="prod-info">
+                        <h2 class="prod-name" >Air Jordan 1 Low “UNC/Obsidian Blue” (W)</h2>
+                        <span class="price">R$1.499,00</span> <span class="real-price">R$1.999,00</span>
+                    </div>
+                </div>
+                <div class="prod-card">
+                    <div class="prod-img" >
+                        <img class="prod-thumb" src="./assets/boot2.png" alt="">
+                        <button class="card-btn">Adicionar ao carrinho</button>
+                    </div>
+                    <div class="prod-info">
+                        <h2 class="prod-name" >NBA x Nike - Dunk Low “Chicago”</h2>
+                        <span class="price">R$1.899,99</span> <span class="real-price">R$2.299,99</span>
+                    </div>
+                </div>
+                <div class="prod-card">
+                    <div class="prod-img" >
+                        <img class="prod-thumb" src="./assets/boot3.png" alt="">
+                        <button class="card-btn">Adicionar ao carrinho</button>
+                    </div>
+                    <div class="prod-info">
+                        <h2 class="prod-name" >Air Jordan 1 Mid “Light Smoke Grey”</h2>
+                        <span class="price">R$1.799,99</span> <span class="real-price">R$2.199,99</span>
+                    </div>
+                </div>
+                <div class="prod-card">
+                    <div class="prod-img" >
+                        <img class="prod-thumb" src="./assets/boot4.png" alt="">
+                        <button class="card-btn">Adicionar ao carrinho</button>
+                    </div>
+                    <div class="prod-info">
+                        <h2 class="prod-name" >Dunk Low SB "WHY SO SAD ?"</h2>
+                        <span class="price">R$1.799,99</span> <span class="real-price">R$2.199,99</span>
+                    </div>
+                </div>
+                <div class="prod-card">
+                    <div class="prod-img" >
+                        <img class="prod-thumb" src="./assets/boot5.png" alt="">
+                        <button class="card-btn">Adicionar ao carrinho</button>
+                    </div>
+                    <div class="prod-info">
+                        <h2 class="prod-name" >Dunk Low “Panda/White Black”</h2>
+                        <span class="price">R$1.799,99</span> <span class="real-price">R$2.199,99</span>
+                    </div>
+                </div>
+                <div class="prod-card">
+                    <div class="prod-img" >
+                        <img class="prod-thumb" src="./assets/boot6.png" alt="">
+                        <button class="card-btn">Adicionar ao carrinho</button>
+                    </div>
+                    <div class="prod-info">
+                        <h2 class="prod-name" >Jordan 1 Mid “Stealth”</h2>
+                        <span class="price">R$1.799,99</span> <span class="real-price">R$2.199,99</span>
+                    </div>
+                </div>    
+                <div class="prod-card">
+                    <div class="prod-img">
+                      <img class="prod-thumb" src="./assets/boot7.png" alt="">
+                      <button class="card-btn">Adicionar ao carrinho</button>
+                    </div>
+                    <div class="prod-info">
+                      <h2 class="prod-name">Jordan 1 Low “Bordeaux”</h2>
+                      <span class="price">R$1.499,99</span>
+                      <span class="real-price">R$1.849,99</span>
+                    </div>
+                  </div>
+                  <div class="prod-card">
+                    <div class="prod-img">
+                      <img class="prod-thumb" src="./assets/boot8.png" alt="">
+                      <button class="card-btn">Adicionar ao carrinho</button>
+                    </div>
+                    <div class="prod-info">
+                      <h2 class="prod-name">Dunk High “Crimson Tint”</h2>
+                      <span class="price">R$1.599,99</span>
+                      <span class="real-price">R$1.899,99</span>
+                    </div>
+                  </div>
+                  <div class="prod-card">
+                    <div class="prod-img">
+                      <img class="prod-thumb" src="./assets/boot9.png" alt="">
+                      <button class="card-btn">Adicionar ao carrinho</button>
+                    </div>
+                    <div class="prod-info">
+                      <h2 class="prod-name">Jordan 1 Low SE “Concord”</h2>
+                      <span class="price">R$1.699,99</span>
+                      <span class="real-price">R$1.799,99</span>
+                    </div>
+                  </div>
+                  <div class="prod-card">
+                    <div class="prod-img">
+                      <img class="prod-thumb" src="./assets/boot10.png" alt="">
+                      <button class="card-btn">Adicionar ao carrinho</button>
+                    </div>
+                    <div class="prod-info">
+                      <h2 class="prod-name">Air Jordan 1 High OG “Patent Bred”</h2>
+                      <span class="price">R$1.799,99</span>
+                      <span class="real-price">R$2.099,99</span>
+                    </div>
+                  </div>
+            </div>
+        </section> 
+
+
+    </div>
+    <!-- section3 (carrosel+catalogo)(end) -->
+
+
+
+    <!-- section4 (review)(start) -->
+    <div>
+        <h1 id="slide-feedback" style="position: relative;" class="titulo">FeedBack</h1> 
+        <section class="review">
+            <!-- onde ficarão contidos as provas sociais -->
+            <div class="box">
+
+                <!-- a primeira box com commentário e img -->
+                <div class="comment-box">
+                    <!-- box(top, nome da pessoa e ig) -->
+                    <div class="top">
+                        <div class="profile">
+                            <div class="profile-image">
+                                <img src="./assets/rev1.jpg">
+                            </div>
+                            <div class="Name">
+                                <strong>Márcia</strong>
+                                <span>@Marcialima</span>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- box(comentário) -->
+                    <div class="comment">
+                        <p>Qualidade, estilo e entrega rápida! Os produtos dessa loja são incríveis, com ótima qualidade e estilo. Além disso, a entrega foi rápida. Recomendo!</p>
+                    </div>
+                </div>
+
+                <div class="comment-box">
+                    <div class="top">
+                        <div class="profile">
+                            <div class="profile-image">
+                                <img src="./assets/rev2.jpg">
+                            </div>
+                            <div class="Name">
+                                <strong>Felipe</strong>
+                                <span>@felipedossantos</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <p>Produtos de alta qualidade! Adorei a durabilidade e o conforto dos sneakers dessa loja. Recomendo para quem busca qualidade</p>
+                    </div>
+                </div>
+
+                <div class="comment-box">
+                    <div class="top">
+                        <div class="profile">
+                            <div class="profile-image">
+                                <img src="./assets/rev3.jpg">
+                            </div>
+                            <div class="Name">
+                                <strong>Lorena</strong>
+                                <span>@lorenavieira</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <p>Entrega super rápida! Comprei na loja e em poucos dias já estava com meus sneakers novinhos em casa. Ótimo serviço!"</p>
+                    </div>
+                </div>
+
+                <div class="comment-box">
+                    <div class="top">
+                        <div class="profile">
+                            <div class="profile-image">
+                                <img src="./assets/rev4.jpg">
+                            </div>
+                            <div class="Name">
+                                <strong>Vinicius</strong>
+                                <span>@viniciuslima</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <p>Estilo incrível! Os modelos dessa loja são modernos e únicos. Adorei o design dos sneakers, super estilosos!</p>
+                    </div>
+                </div>
+            </div>
+        </section>    
+    </div>
+    <!-- section4 (review)(end) -->
+
+
+
+    <!-- section 5(footer) (start)  -->
+    <footer class="footer">
+        <div class="footer-left">
+          <h2 class="address">Endereço</h2>  
+          <a href="https://maps.google.com/maps?q=Rua%20Pereira" target="_blank" class="footer-address">Rua Pereira</a>
+          <p>2023 - CitySneakers. Todos os direitos reservados.</p>
+        </div>
+
+        <div class="footer-right">
+          <p><strong>Contato</strong>: <span>(71)99999-9999</span></p>
+          <p>Developed by Kauai Pires Vaz Oliveira</p>
+        </div>
+      </footer>      
+    <!-- section 5(footer) (end) -->
+
+    
+    
+    <!-- js do carrosel -->
+    <script src="./javascript/carrosel.js"></script>
+    <!-- js do modal -->
+    <script src="./javascript/modal.js"></script>
+    <!-- js do carrosel2 -->
+
+    <body id="myBody">
+
+</body>
+</html>
+
+
+
